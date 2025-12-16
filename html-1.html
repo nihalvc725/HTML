@@ -4,9 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        h2{
+            color: red;
+            background-color: black;
+        }
+        table,th,td
+        {
+            border: 2px solid green;
+            color: goldenrod;
+            background-color: aquamarine;
+                        
+
+        }
+        table{
+                        width: 75%;
+
+            
+        }
+        th,td
+        {
+            padding: 20px;
+        }
+        tr:nth-child(even)
+        {
+                        background-color: bisque;
+
+        }
+                th:nth-child(odd),td:nth-child(odd)
+                {
+                    background-color: rgb(16, 16, 17);
+                }
+                 tr:nth-child(odd)
+        {
+                        background-color: rgb(5, 5, 4);
+
+        }
+                th:nth-child(odd),td:nth-child(odd)
+                {
+                    background-color: rgb(115, 15, 208);
+                }
+
+    </style>
 </head>
 <body>
-    <h1><b>HEADING</b></h1>
+    <h1 style="color: red;"><b>HEADING</b></h1>
     <h2><i>heading</i></h2>
     <h3><u>heading</u></h3>
     <h4>heading</h4>
@@ -81,7 +124,7 @@
                             <li>PORSCHE</li>
                             <ol type="I">
                                 <li>panamera</li>
-                                <li>911 gt3rs</li>
+                                <li style="color: rgb(3, 61, 3);">911 gt3rs</li>
                             </ol>
                             <li>TOYOTA</li>
                             <ol type="I">
@@ -121,6 +164,68 @@
 
 
 </table>
+
+
+<br>
+<br>
+<table border="2">
+    <tr>
+    <th colspan="2">Name</th>
+    <th>Technology</th>
+    <th>Duration</th>
+    </tr>
+    <tr>
+        <td>fasil</td>
+        <td>Ibrahim</td>
+        <td>Mern</td>
+        <td>6 Months</td>
+        <tr>
+            <td>shahal</td>
+            <td>K</td>
+            <td>python</td>
+            <td>1 Year</td>
+        </tr>
+        <tr>
+            <td>john</td>
+            <td> manu</td>
+            <td>Data science</td>
+            <td>3 Months</td>
+        </tr>
+
+    </tr>
+</table>
+<br>
+<br>
+
+<form action="">
+<label for="">Name</label>
+<input type="text"><br><br>
+<label for="">Email</label>
+<input type="email"><br><br>
+<label for="">Password</label>
+<input type="password"><br><br>
+<label for="">DOB</label>
+<input type="date"><br><br>
+<label for="">Gender:</label>
+<input type="radio" name="gender">Male
+<input type="radio" name="gender">Female <br><br>
+<label for="">Technologies:</label>
+<input type="checkbox">MERN
+<input type="checkbox">Python <br><br>
+<label for="">District</label>
+<select name="" id="">
+<option value="">Please select</option>
+<option value="">Kozhikode</option>
+<option value="">Malappuram</option>
+<option value="">Kannur</option>
+</select><br><br>
+<label for="">Address</label>
+<textarea name="" id="" rows="5"></textarea><br><br>
+<label for="">Resume</label>
+<input type="file"><br><br>
+<input type="submit" value="Register">
+<input type="reset">
+</form>
     
 </body>
 </html>

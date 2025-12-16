@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Assignment Form</title>
+    <style>
+        /* Basic Styling to resemble the image */
+        body {
+            font-family: Arial, sans-serif;
+            /* background-color: #1e1e1e; Dark background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .form-container {
+            background-color: #ffffff; /* White form background */
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            display: flex;
+            gap: 20px; /* Space between side-by-side inputs */
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-field {
+            flex: 1; /* Makes the fields take equal width */
+            min-width: 45%;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .radio-group {
+            margin-top: 10px;
+        }
+
+        .radio-group div {
+            margin-bottom: 5px;
+        }
+
+        .submit-button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: #28a745; /* Green button color */
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 30px;
+        }
+
+        .submit-button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <form action="#" method="POST">
+        <h2>Task Assignment Form</h2>
+
+        <label>Employee Name</label>
+        <div class="form-group">
+            <div class="form-field">
+                <input type="text" id="employee-first-name" name="employee_first_name" required>
+                <small>First Name</small>
+            </div>
+            <div class="form-field">
+                <input type="text" id="employee-last-name" name="employee_last_name" required>
+                <small>Last Name</small>
+            </div>
+        </div>
+
+        <label>Manager Name</label>
+        <div class="form-group">
+            <div class="form-field">
+                <input type="text" id="manager-first-name" name="manager_first_name">
+                <small>First Name</small>
+            </div>
+            <div class="form-field">
+                <input type="text" id="manager-last-name" name="manager_last_name">
+                <small>Last Name</small>
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <div class="form-field">
+                <label for="task-name">Task</label>
+                <input type="text" id="task-name" name="task_name" required>
+            </div>
+            <div class="form-field">
+                <label for="task-id">Task ID</label>
+                <input type="text" id="task-id" name="task_id" placeholder="ex: 3" required>
+            </div>
+        </div>
+
+        <fieldset>
+            <legend>Status</legend>
+            <div class="radio-group">
+                <div>
+                    <input type="radio" id="status-not-started" name="status" value="Not Started" checked>
+                    <label for="status-not-started">Not Started</label>
+                </div>
+                <div>
+                    <input type="radio" id="status-in-progress" name="status" value="In Progress">
+                    <label for="status-in-progress">In Progress</label>
+                </div>
+                <div>
+                    <input type="radio" id="status-done" name="status" value="Done">
+                    <label for="status-done">Done</label>
+                </div>
+                <div>
+                    <input type="radio" id="status-awaiting-feedback" name="status" value="Awaiting Feedback">
+                    <label for="status-awaiting-feedback">Awaiting Feedback</label>
+                </div>
+            </div>
+        </fieldset>
+
+        <div>
+            <label for="additional-notes">Additional Notes</label>
+            <textarea id="additional-notes" name="additional_notes" placeholder="Type here..."></textarea>
+        </div>
+
+        <div style="margin-top: 20px;">
+            <label for="instructions">Instructions</label>
+            <textarea id="instructions" name="instructions"></textarea>
+        </div>
+
+        <button type="submit" class="submit-button">Submit</button>
+
+    </form>
+</div>
+
+</body>
+</html>
+
+
